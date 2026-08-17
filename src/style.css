@@ -1,0 +1,67 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+
+#viewer {
+  position: relative;
+  min-height: 0;
+  background: #000;
+}
+
+#map {
+  height: 100%;
+  min-height: 0;
+}
+
+.share-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 6px;
+  background: rgb(0 0 0 / 55%);
+  color: #fff;
+  font:
+    500 12px/1.4 system-ui,
+    sans-serif;
+  cursor: pointer;
+}
+
+.share-btn.copied {
+  background: #16a34a;
+}
+
+#viewer .empty {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #ddd;
+  font:
+    1rem/1.4 system-ui,
+    sans-serif;
+  text-align: center;
+}
+
+.map-pin {
+  width: 15px;
+  height: 15px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background: #16a34a;
+  cursor: pointer;
+}
+
+.map-pin.active {
+  background: #e11d48;
+  z-index: 1;
+}

@@ -1,0 +1,31 @@
+{
+  "name": "photosphere-map-viewer",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vp dev",
+    "build": "tsc && vp build",
+    "preview": "vp preview",
+    "scan": "node scripts/scan-photos.ts",
+    "prepare": "vp config"
+  },
+  "dependencies": {
+    "@photo-sphere-viewer/core": "^5.15.1",
+    "exifr": "^7.1.3",
+    "maplibre-gl": "^6.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "26.2.0",
+    "typescript": "~6.0.2",
+    "vite": "catalog:",
+    "vite-plus": "catalog:"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.21.0",
+      "onFail": "download"
+    }
+  }
+}
