@@ -1,10 +1,9 @@
-import "maplibre-gl/dist/maplibre-gl.css";
-import { config, LngLatBounds, Map as MapLibreMap, Marker } from "maplibre-gl";
-import type { Photo } from "./data.ts";
+import { LngLatBounds, Map as MapLibreMap, Marker, setWorkerUrl } from 'maplibre-gl'
+import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
+import 'maplibre-gl/dist/maplibre-gl.css'
+import type { Photo } from './data.ts'
 
-const STYLE_URL = `https://api.protomaps.com/styles/v5/light/en.json?key=${import.meta.env.VITE_PROTOMAPS_KEY}`;
-
-config.WORKER_URL = "/maplibre-gl-worker.mjs";
+setWorkerUrl(workerUrl);
 
 export interface MapHandle {
   select(index: number): void;
@@ -17,7 +16,7 @@ export function createMap(
 ): MapHandle {
   const map = new MapLibreMap({
     container,
-    style: STYLE_URL,
+    style: `https://api.protomaps.com/styles/v5/light/en.json?key=${import.meta.env.VITE_PROTOMAPS_KEY}`,
     center: [0, 0],
     zoom: 1,
   });
