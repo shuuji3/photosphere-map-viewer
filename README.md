@@ -1,6 +1,6 @@
 # photosphere-map-viewer
 
-a simple static gps-tagged 360 photos viewer with [Photo Sphere Viewer](https://photo-sphere-viewer.js.org/) + [MapLibre](https://maplibre.org/).
+a simple static gps-tagged 360 photos viewer with [Photo Sphere Viewer](https://photo-sphere-viewer.js.org/) + [MapLibre](https://maplibre.org/) + [Protomaps](https://protomaps.com/).
 
 ![screenshot of app. above area shows 360 photo. bottom shows protomaps and green dots representing locations of photo shot.](screenshot.png)
 
